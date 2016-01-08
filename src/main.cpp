@@ -1,11 +1,16 @@
 #include <SDL.h>
 #include <SDL_opengl.h>
-
+#include <SDL_ttf.h>
+#include <cassert>
 #include "camera.hpp"
 #include "logger.hpp"
 
 int main(){
 	Camera g;
+	TTF_Font * font;
+	TTF_Init();
+	font = TTF_OpenFont("fonts/UbuntuMono-R.ttf", 24);
+	assert(font != NULL);
 	Logger mylog("mainlog.txt");
 	if(g.init_successful()){
 		bool running = true;
@@ -18,8 +23,8 @@ int main(){
 				switch(events.type){
 
 					case SDL_QUIT:
-						running = false;
-						break;
+					running = false;
+					break;
 					case SDL_TEXTINPUT:
 					int x = 0, y = 0;
 					SDL_GetMouseState(&x, &y); //doesn't use this atm contains mousepos

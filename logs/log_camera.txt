@@ -1,4 +1,4 @@
-4.8268e-05s: Initializing of Muh Window Name
-0.275172s: Warning: Unable to set VSync! SDL Error: That operation is not supported
-0.303759s: Done initializing of Muh Window Name
-2.1689s: Running destructor of Muh Window Name
+0.000146484s: Initializing of Muh Window Name
+0.379124s: Warning: Unable to set VSync! SDL Error: That operation is not supported
+0.397934s: Done initializing of Muh Window Name
+2.23916s: Running destructor of Muh Window Name

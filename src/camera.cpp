@@ -30,7 +30,7 @@ Camera::Camera(){
 					m_log->log("Unable to initialize OpenGL!");
 				}
 			}
-			//m_sdl_surface = SDL_GetWindowSurface(m_sdl_window);
+			m_sdl_surface = SDL_GetWindowSurface(m_sdl_window);
 		}
 	}
 	m_successful_init = true;

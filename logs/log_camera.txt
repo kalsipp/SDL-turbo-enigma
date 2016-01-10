@@ -1,4 +1,4 @@
-0.000146484s: Initializing of Muh Window Name
-0.379124s: Warning: Unable to set VSync! SDL Error: That operation is not supported
-0.397934s: Done initializing of Muh Window Name
-2.23916s: Running destructor of Muh Window Name
+0.00177802s: Initializing of Muh Window Name
+0.355547s: OpenGL context could not be created! SDL Error: The specified window isn't an OpenGL window
+0.361493s: Done initializing of Muh Window Name
+2.37845s: Running destructor of Muh Window Name

@@ -14,7 +14,7 @@ Camera::Camera(){
 			SDL_WINDOWPOS_UNDEFINED,
 			m_screen_width, 
 			m_screen_height, 
-			SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+			SDL_WINDOW_SHOWN);
 		if(m_sdl_window  == nullptr){
 			m_log->log( "SDL could not initialize! SDL_Error: " + std::string(SDL_GetError()) );
 		}else{
@@ -26,14 +26,23 @@ Camera::Camera(){
 					m_log->log("Warning: Unable to set VSync! SDL Error: " + std::string(SDL_GetError()) );
 				}
 
-				if(!init_gl()){
-					m_log->log("Unable to initialize OpenGL!");
-				}
+				//if(!init_gl()){
+				//	m_log->log("Unable to initialize OpenGL!");
+				//}
 			}
 			m_sdl_surface = SDL_GetWindowSurface(m_sdl_window);
 		}
 	}
 	m_successful_init = true;
+
+	//Temp Getting image to show
+	pelle  = SDL_LoadBMP("media/test.bmp");
+	if(pelle == nullptr) assert(false);
+	pelle = SDL_ConvertSurface(pelle, m_sdl_surface->format, 0);
+	SDL_BlitSurface( pelle, NULL, m_sdl_surface, NULL );
+	SDL_UpdateWindowSurface(m_sdl_window);
+
+	//Temp
 	m_log->log("Done initializing of " + m_window_name);
 }
 bool Camera::init_gl(){
@@ -65,7 +74,7 @@ bool Camera::init_gl(){
 Camera::~Camera(){
 
 	m_log->log("Running destructor of " + m_window_name);
-
+	SDL_FreeSurface(pelle);
 	SDL_DestroyWindow(m_sdl_window);
 	SDL_Quit();
 
@@ -76,25 +85,11 @@ bool Camera::init_successful(){
 	return m_successful_init;
 }
 void Camera::render(){
-    glClear( GL_COLOR_BUFFER_BIT );
-    
-    //Render quad
-
-        glRotatef(0.4f,0.0f,1.0f,0.0f);    // Rotate The cube around the Y axis
-        glRotatef(0.2f,1.0f,1.0f,1.0f);
-        glColor3f(0.0f,1.0f,0.0f); 
-
-        glBegin( GL_QUADS );
-            glVertex2f( -0.5f, -0.5f );
-            glVertex2f( 0.5f, -0.5f );
-            glVertex2f( 0.5f, 0.5f );
-            glVertex2f( -0.5f, 0.5f );
-        glEnd();
-
+    //Draw graphics here
 }
 
 void Camera::update(){
-	SDL_GL_SwapWindow(m_sdl_window);
+	//SDL_GL_SwapWindow(m_sdl_window);
 
 }
 

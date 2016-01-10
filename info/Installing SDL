@@ -1,6 +1,13 @@
 Installing SDL on Linux Mint
+sudo apt-get install following
 
-http://nothingtocode.blogspot.no/2013/07/setting-up-sdl2-in-ubuntu-linux-mint-debian.html
+build-essential
+libsdl2-dev
+libsdl2-gfx-dev
+libsdl2-image-dev
+libsdl2-mixer-dev
+libsdl2-net-dev
+libsdl2-ttf-dev
 
 Good example
 

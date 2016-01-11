@@ -1,0 +1,4 @@
+6.9013e-05s: Initializing of Martins testfonster
+0.0982624s: OpenGL context could not be created! SDL Error: The specified window isn't an OpenGL window
+0.251902s: Done initializing of Martins testfonster
+0.251975s: Could not initialize SDL.

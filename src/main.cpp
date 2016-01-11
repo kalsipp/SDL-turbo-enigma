@@ -1,11 +1,16 @@
+/*
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include <SDL_ttf.h>
 #include <cassert>
 #include "camera.hpp"
 #include "logger.hpp"
-
+*/
+#include "martinstestklass.hpp"
 int main(){
+    Martinstestklass martin;
+    martin.main();
+	/*
 	Camera g;
 	TTF_Font * font;
 	TTF_Init();
@@ -42,4 +47,5 @@ int main(){
 		}
 		SDL_StopTextInput();
 	}
+	*/
 }

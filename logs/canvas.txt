@@ -1,0 +1,2 @@
+3.565e-05s: Canvas created
+0.198847s: Canvas created properly

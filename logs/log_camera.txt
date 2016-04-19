@@ -1,4 +1,0 @@
-5.4591e-05s: Initializing of Muh Window Name
-0.104603s: OpenGL context could not be created! SDL Error: The specified window isn't an OpenGL window
-0.106962s: Done initializing of Muh Window Name
-1.17732s: Running destructor of Muh Window Name
